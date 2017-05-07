@@ -16,19 +16,19 @@ OCCxOCEAN <- setClass(
 )
 
 
-# 
-# # create a method to get the value of the OCC
-# setGeneric(name="getOcean",
-#            def=function(theObject,i)
-#            {
-#              standardGeneric("getOcean")
-#            }
-# )
-# 
-# setMethod(f="getOcean",
-#           signature="Ocean",
-#           definition=function(theObject,i)
-#           {
-#             return(theObject@OCEAN[,i])
-#           }
-# )
+
+# create a method to get the value of the OCCxOCEAN
+setGeneric(name="getOCCxOCEAN",
+           def=function(theObject,i,j)
+           {
+             standardGeneric("getOCCxOCEAN")
+           }
+)
+
+setMethod(f="getOCCxOCEAN",
+          signature="OCCxOCEAN",
+          definition=function(theObject,i,j)
+          {
+            return(theObject@matriz[i,j])
+          }
+)
