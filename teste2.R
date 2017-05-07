@@ -55,6 +55,8 @@ source("OCCxOCEAN.R")
 occ_ocean = new("OCCxOCEAN", matriz = as.matrix(read.csv("OCC_OCEAN.csv", row.names = 1)))
 getOCCxOCEAN(occ_ocean,2,2)
 
+occ_ocean <- setOCCxOCEAN(occ_ocean,2,2,1)
+
 getOCCxOCEAN(occ_ocean,2,2)
 d = list(length(2),new("Occ"))
 d[[1]] = new("Occ")

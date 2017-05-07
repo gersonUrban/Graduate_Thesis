@@ -32,3 +32,21 @@ setMethod(f="getOCCxOCEAN",
             return(theObject@matriz[i,j])
           }
 )
+
+# create a method to assign the value of the Occ[i]
+setGeneric(name="setOCCxOCEAN",
+           def=function(theObject,i,j,x)
+           {
+             standardGeneric("setOCCxOCEAN")
+           }
+)
+
+setMethod(f="setOCCxOCEAN",
+          signature="OCCxOCEAN",
+          definition=function(theObject,i,j,x)
+          {
+            theObject@matriz[i,j] <- x
+            validObject(theObject)
+            return(theObject)
+          }
+)
