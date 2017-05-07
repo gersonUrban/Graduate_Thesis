@@ -1,3 +1,5 @@
+setwd("C:/Users/Gerson/Documents/GitHub/Graduate_Thesis")
+
 #setClass("Mercadoria", representation(m1 = "numeric", m2 = "numeric"),
 #         prototype(m1 = 1, m2 = 1))
 a <- new("Mercadoria")
@@ -48,6 +50,9 @@ oc2 = new("Ocean", OCEAN = c(0,0,0.3,1,0))
 
 source("AtualizaOcean.R")
 att = new("AtualizaOcean")
+
+source("OCCxOCEAN.R")
+occ_ocean = new("OCCxOCEAN", matriz = as.matrix(read.csv("OCC_OCEAN.csv", row.names = 1)))
 
 d = list(length(2),new("Occ"))
 d[[1]] = new("Occ")
